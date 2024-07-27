@@ -25,8 +25,8 @@ app打的包在给测试和产品验收时，经常不能直接区分出这个�
 # 需要的前置知识
 
 - 原生如何修改配置app名
-    1. iOS 了解编译前动态配置app名（xcconfig、info.plist、shell）
-    2. Android 同理，需要了解gradle脚本（配置app名、获取版本信息）
+  1. iOS 了解编译前动态配置app名（xcconfig、info.plist、shell）
+  2. Android 同理，需要了解gradle脚本（配置app名、获取版本信息）
 - 如何自动为打包好的apk文件名加上环境、版本、时间信息
 
 - flutter 如何将配置信息传递给原生
@@ -60,6 +60,8 @@ APP_NAME=正式名
 通过修改编译配置就可以运行得到结果了，Debug 时 app 显示测试名、Release 显示正式名
 
 ![修改编译配置](https://pic1.zhimg.com/80/v2-5d3d3d902634bf0071bfb09325d1cab5_1440w.gif)
+
+[看不到图就点这个gif](https://pic1.zhimg.com/80/v2-5d3d3d902634bf0071bfb09325d1cab5_1440w.gif)
 
 修改 iOS app 名先简单介绍到这里
 
@@ -168,6 +170,7 @@ printf "%s\n" "${temp_array[@]}" > ${PROJECT_DIR}/Flutter/DartDefines.xcconfig
 
 ![](https://pic1.zhimg.com/80/v2-8a0386e8c06d3cd7da61ec4c9a28669b_1440w.gif)
 
+[看不到图就点这个gif](https://pic1.zhimg.com/80/v2-8a0386e8c06d3cd7da61ec4c9a28669b_1440w.gif)
 
 ## 在 android studio 配置好参数运行一下看看
 
@@ -177,6 +180,8 @@ printf "%s\n" "${temp_array[@]}" > ${PROJECT_DIR}/Flutter/DartDefines.xcconfig
 ```
 
 ![](https://pic1.zhimg.com/80/v2-6c278a5ebf9bdf1b9fe5749e078b065d_1440w.gif)
+
+[看不到图就点这个gif](https://pic1.zhimg.com/80/v2-6c278a5ebf9bdf1b9fe5749e078b065d_1440w.gif)
 
 # Android 安装包文件名带上版本号信息
 
@@ -203,5 +208,4 @@ android {
 flutter build apk --dart-define APP_NAME=测试名字
 ```
 apk 路径 项目名/build/app/outputs/apk
-
 
